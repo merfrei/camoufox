@@ -1,3 +1,5 @@
+import asyncio
+import functools
 from typing import Any, Dict, Optional, Union, overload
 
 from playwright.async_api import (
@@ -82,7 +84,13 @@ async def AsyncNewBrowser(
     else:
         virtual_display = None
 
-    opt = from_options or launch_options(headless=headless, debug=debug, **kwargs)
+    if from_options:
+        opt = from_options
+    else:
+        loop = asyncio.get_event_loop()
+        opt = await loop.run_in_executor(
+            None,
+            functools.partial(launch_options, headless=headless, debug=debug, **kwargs))
 
     # Persistent context
     if persistent_context:
