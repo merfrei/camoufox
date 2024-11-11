@@ -82,10 +82,12 @@ def _suppress_insecure_warning():
 
 
 @lru_cache(maxsize=None)
-def public_ip(proxy: Optional[str] = None) -> str:
+def public_ip(proxy: Optional[str] = None, bypass_cache: Optional[bool] = False) -> str:
     """
     Sends a request to a public IP api
     """
+    if bypass_cache:
+        return public_ip.__wrapped__(proxy, False)
     URLS = [
         # Prefers IPv4
         "https://api.ipify.org",

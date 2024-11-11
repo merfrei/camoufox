@@ -362,6 +362,7 @@ def launch_options(
     i_know_what_im_doing: Optional[bool] = None,
     debug: Optional[bool] = None,
     virtual_display: Optional[str] = None,
+    bypass_cache: Optional[bool] = None,
     **launch_options: Dict[str, Any],
 ) -> Dict[str, Any]:
     """
@@ -512,9 +513,9 @@ def launch_options(
         if geoip is True:
             # Find the user's IP address
             if proxy:
-                geoip = public_ip(Proxy(**proxy).as_string())
+                geoip = public_ip(Proxy(**proxy).as_string(), bypass_cache=bypass_cache)
             else:
-                geoip = public_ip()
+                geoip = public_ip(bypass_cache=bypass_cache)
 
         # Spoof WebRTC if not blocked
         if not block_webrtc:
