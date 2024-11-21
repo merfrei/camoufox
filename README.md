@@ -19,25 +19,38 @@ Camoufox is an open source anti-detect browser for robust fingerprint injection 
 > [!NOTE]
 > All of the latest documentation is avaliable at [camoufox.com](https://camoufox.com).
 
-Camoufox is the most effective (and future-proof) open source solution for avoiding bot detection and intelligent fingerprint rotation. It's designed to run in the smallest memory footprint possible for datacenters.
+Camoufox is the most modern, effective & future-proof open source solution for avoiding bot detection and intelligent fingerprint rotation. It outperforms most commercial anti-bot browsers.
+
+---
+
+<a href="https://scrapfly.io/?utm_source=github&utm_medium=sponsoring&utm_campaign=camoufox" target="_blank">
+<img src="https://raw.githubusercontent.com/daijro/camoufox/main/assets/scrapfly.png" alt="Scrapfly.io" width="149">
+</a>
+
+[Scrapfly](https://scrapfly.io/?utm_source=github&utm_medium=sponsoring&utm_campaign=camoufox) is an enterprise-grade solution providing Web Scraping API that aims to simplify the scraping process by managing everything: real browser rendering, rotating proxies, and fingerprints (TLS, HTTP, browser) to bypass all major anti-bots. Scrapfly also unlocks the observability by providing an analytical dashboard and measuring the success rate/block rate in detail.
+
+---
 
 ## Features
 
 - Invisible to **all anti-bot systems** 🎭
   - Camoufox performs better than most commerical anti-bot browsers.
+
 * Fingerprint injection & rotation (without JS injection!)
-  * All navigator properties (device, OS, hardware, browser, etc.) ✅
-  * Screen size, resolution, window, & viewport properties ✅
-  * Geolocation, timezone, & locale spoofing ✅
-  * Font spoofing & anti-fingerprinting ✅
-  * WebGL parameters, supported extensions, context attributes, & shader precision formats ✅
-  * WebRTC IP spoofing at the protocol level ✅
-  * Voices, speech playback rate, etc. ✅
-  * And much, much more!
+  - All navigator properties (device, OS, hardware, browser, etc.) ✅
+  - Screen size, resolution, window, & viewport properties ✅
+  - Geolocation, timezone, & locale spoofing ✅
+  - Font spoofing & anti-fingerprinting ✅
+  - WebGL parameters, supported extensions, context attributes, & shader precision formats ✅
+  - WebRTC IP spoofing at the protocol level ✅
+  - Media devices, voices, speech playback rate, etc. ✅
+  - And much, much more!
+
 - Quality of life features
   - Human-like mouse movement 🖱️
   - Blocks & circumvents ads 🛡️
   - No CSS animations 💨
+
 * Debloated & optimized for memory efficiency ⚡
 * [PyPi package](https://pypi.org/project/camoufox/) for updates & auto fingerprint injection 📦
 * Stays up to date with the latest Firefox version 🕓
