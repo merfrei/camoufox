@@ -28,10 +28,6 @@ custom_fingerprint: >-
 proxy_without_geoip: >-
     When using a proxy, it is heavily recommended that you pass `geoip=True`.
 
-allow_webgl: >-
-    Enabling WebGL can lead to Canvas fingerprinting and detection.
-    Camoufox will automatically spoof your vendor and renderer, but it cannot spoof your WebGL fingerprint.
-
 ff_version: >-
     Spoofing the Firefox version will likely lead to detection.
     If rotating the Firefox version is absolutely necessary, it would be more advisable to
@@ -40,3 +36,6 @@ ff_version: >-
 no_region: >-
     Because you did not pass in a locale region, Camoufox will generate one for you.
     This can cause suspicion if your IP does not match your locale region.
+
+block_webgl: >-
+    Disabling WebGL is not recommended. Many WAFs will check if WebGL is enabled.
